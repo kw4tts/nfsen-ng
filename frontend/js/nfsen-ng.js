@@ -536,7 +536,7 @@ $(document).ready(function() {
             drag_interval: true,
             prettify: function(ut) {
                 var date = new Date(ut);
-                return date.toDateString();
+                return date.toDateString()+" "+date.toISOString().split("T")[1].split(":").slice(0,2).join(":");
             },
             onChange: function(data) {
                 // remove active state of date slot button
